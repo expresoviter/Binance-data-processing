@@ -17,13 +17,19 @@ body {
 
 </style>
  <body>
-  <h1>The freshest Candlestick Chart for BTCUSDT with 1h interval!</h1>
-  <div id='chart' class='chart'”></div>
+  <h2>The freshest Candlestick Chart for BTCUSDT with 1h interval!</h2>
+  <div id='chart' class='chart'></div>
+  <h2>A piechart of 10 biggest market caps.</h2>
+  <div id="chart2"  class="chart"></div>
 </body>
 
 <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 <script type='text/javascript'>
-  var graphs = {{graphJSON | safe}};
+  var graphs = {{graphJSON[0] | safe}};
   Plotly.plot('chart',graphs,{});
+</script>
+<script type='text/javascript'>
+  var graphs1 = {{graphJSON[1] | safe}};
+  Plotly.plot('chart2',graphs1,{});
 </script>
 </html>
