@@ -5,7 +5,7 @@ import csv
 app = Celery("tasks", broker='redis://localhost/0', backend='db+postgresql://postgres:marzipan@localhost/crypto')
 @app.on_after_configure.connect
 def schedule_periodic_tasks(sender, **kwargs):
-    sender.add_periodic_task(60.0, dataCollection.s())
+    sender.add_periodic_task(3600.0, dataCollection.s())
 
 @app.task
 def dataCollection():
