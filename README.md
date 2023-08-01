@@ -1,4 +1,4 @@
-# Test task with Binance API usage.
+# The task with Binance API usage.
 ## Task 1.
 The script to collect data from Binance API for 1h interval and BTCUSDT symbol is provided in file ['tasks.py'](tasks.py).
 There are **two** options for you to run the script.
